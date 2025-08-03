@@ -1,0 +1,259 @@
+:root { /*Main theme colour scheme */
+    --main-color: #5aa7e6;
+    --background: #6997b3;
+    --text-color: #000000;
+    --accent-color: #d3eaff;
+}
+body.theme-halloween { /* halloween color scheme*/
+    --main-color: #fc6621;   
+    --background: #000000;
+    --text-color: #6b00b3;
+    --accent-color: #d599fd; 
+}
+
+body.theme-christmas { /* Christmas colour scheme*/
+    --main-color: #da0000;
+    --background: #008b2a;
+    --text-color: #000000;
+    --accent-color: #f8e0e0;
+}
+
+/*The following includes all the style options for various classes and features used across all the pages in the site */
+
+ .button{ 
+            background-color: grey;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+a.remove-btn {
+    color: white;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+a.remove-btn:hover {
+    background-color: darkred;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+}
+.sidebar.hidden {
+    display: none;
+}
+
+.main-content.expanded {
+    width: 100%;
+    flex: none;
+    /* prevent flex from being overridden */
+}
+
+main {
+    flex: 1;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--background);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+    margin: 10;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    padding: 5px 15px;
+    border-top: 2px solid var(--accent-color);
+
+}
+
+.material-symbols-outlined {
+  font-size: 32px;
+  color: var(--text-color);
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.title{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-head {
+    margin-right: 16px;
+    color: var(--accent-color);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.sidebar {
+    width: 10%;
+    background-color: var(--main-color);
+    padding: 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+ 
+    transition: transform 0.3s ease;
+    display: flex;
+
+}
+
+.sidebar li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--accent-color);
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+#toggleSidebar {
+    position: fixed;
+    border-radius: 8px;
+    z-index: 1000;
+    background-color: var(--background);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.about-main{
+    text-align: center;
+  padding: 80px 20px;
+}
+.about-main h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.2em;
+  color: var(--text-color);
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    width: 200px;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.product-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.product-card p {
+    margin: 5px 0;
+}
+
+.product-detail {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.product-detail img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.order-table {
+    width: 100%;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    border: 2px solid var(--accent-color);
+    padding: 8px;
+}
+
+.order-table thead th {
+    background-color: var(--main-color);
+    text-align: left;
+}
+
+.order-table .order-total-row {
+    font-weight: bold;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
